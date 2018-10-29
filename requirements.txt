@@ -1,0 +1,15 @@
+certifi==2018.8.24
+cycler==0.10.0
+kiwisolver==1.0.1
+matplotlib==3.0.0
+numpy==1.15.2
+Pillow==5.3.0
+pyparsing==2.2.2
+python-dateutil==2.7.3
+scikit-learn==0.20.0
+scipy==1.1.0
+six==1.11.0
+sklearn==0.0
+torch==0.4.1
+torchvision==0.2.1
+opencv-python==3.4.3.18
