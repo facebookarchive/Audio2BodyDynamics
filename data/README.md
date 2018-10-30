@@ -1,5 +1,5 @@
 ## Train and test data
-Download data.zip containing the files below and extract them to "/data" folder.
+Download [data.zip](https://github.com/facebookresearch/Audio2BodyDynamics/releases/download/v1.0/data.zip) containing the files below and extract them to "/data" folder.
 The data.zip file is attached with version 1.0 in the GitHub release.
 
 data.zip:

@@ -68,7 +68,7 @@ def main():
                                   lefthand[1]), axis=2)
     all_targ_pts = np.concatenate((body[0], righthand[0], lefthand[0]), axis=2)
 
-    # Pred over GT
+    # Just Gt
     visualizeKeypoints(args.vidtype, all_targ_pts, all_pred_pts,
                        args.audio_path, args.gt_path, show_pred=False)
 

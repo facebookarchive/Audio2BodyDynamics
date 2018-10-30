@@ -11,7 +11,7 @@ from data_utils.transform_keypoints import transformPtsWithT
 from scipy.io.wavfile import write
 
 THRESH = 0
-FFMPEG_LOC = "/usr/local/fbprojects/fb-motion2/ffmpeg/bin/ffmpeg"
+FFMPEG_LOC = "ffmpeg "
 
 
 def getUpperOPBodyKeypsLines():

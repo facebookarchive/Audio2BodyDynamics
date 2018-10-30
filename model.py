@@ -40,15 +40,11 @@ class AudioToKeypointRNN(nn.Module):
         self.lstm = nn.LSTM(options['input_dim'], hidden_dim, 1)
         self.dropout = nn.Dropout(options['dropout'])
         self.fc = nn.Linear(hidden_dim, options['output_dim'])
-        # self.norm = nn.BatchNorm1d(options['output_dim'])
 
         self.initialize()
 
     def initialize(self):
-        # Initialize LSTM Weights with Random Uniform
-        # TODO (ldery) : empirically test this.
-        # Does not seem like a good initialization though pulled from Caffe2
-        # Since we are initializing forget gate to be positive from start
+        # Initialize LSTM Weights and Biases
         for layer in self.lstm._all_weights:
             for param_name in layer:
                 if 'weight' in param_name:
@@ -68,5 +64,4 @@ class AudioToKeypointRNN(nn.Module):
         output = output.view(-1, output.size()[-1])  # flatten before FC
         dped_output = self.dropout(output)
         predictions = self.fc(dped_output)
-        # predictions = self.norm(predictions)
         return predictions
